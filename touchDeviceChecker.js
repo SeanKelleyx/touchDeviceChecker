@@ -9,4 +9,9 @@
 			window.removeEventListener('touchstart', setHasTouch);
 		}, false);
 	};
+
+	$.fn.isTouchDetected = function(options){
+		return hasTouch;
+	};
+	
 })(jQuery);

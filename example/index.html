@@ -5,12 +5,16 @@
 	</head>
 	<body>
 		<h1>Example on how to use touchDeviceChecker</h1>
+		<span id='button'>Is touch detected?</span>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script type="text/javascript" src="../touchDeviceChecker.js"></script>
 		<script type="text/javascript">
 			$(this).checkForTouch();
 			$(this).on("touchDeviceDetected", function(){
 				console.log('touched');
+			});
+			$("#button").on("click touchstart", function(){
+				alert($(this).isTouchDetected());
 			});
 		</script>
 	</body>
