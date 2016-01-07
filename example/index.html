@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
 		<title>touchDeviceChecker Example</title>
 	</head>
 	<body>
 		<h1>Example on how to use touchDeviceChecker</h1>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="../touchDeviceChecker.js"></script>
+		<script type="text/javascript">
+			$(this).checkForTouch();
+			$(this).on("touchDeviceDetected", function(){
+				console.log('touched');
+			});
+		</script>
 	</body>
 </html>
